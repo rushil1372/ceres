@@ -55,6 +55,15 @@ if uploaded_file is not None:
         # print(prediction)
         os.remove('uploaded/'+uploaded_file.name)
 
+        if(prediction == "Alluvial Soil"):
+            st.success("Rice, Sugarcane, Tobacco, Maize, Soybean, Jute are the crops recommended for this type of soil")
+        if(prediction == "Black Soil"):
+            st.success("Groundnut and Cotton are the crops recommended for this type of soil")
+        if(prediction == "Desert Soil"):
+            st.success("Cactus, Agave or Mesquite are the crops recommended for this type of soil")
+        if(prediction == "Red Soil"):
+            st.success("Millets, Tobacco, Oil seeds, Potatoes are the crops recommended for this type of soil")
+
 # out_dir = os.path.join(os.path.expanduser('~'), 'Downloads')
 # filename = os.path.join(out_dir, 'data.png')
 
